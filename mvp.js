@@ -42,6 +42,10 @@ function addRecipe() {
 
   renderRecipeCard()
   lastPosition = lastPosition - 600; 
+
+  document.getElementById("recipeName").value = ""
+  document.getElementById("ingredients").value = ""
+  document.getElementById("instructions").value = ""
 }
 
 var renderRecipeCard = function () {
