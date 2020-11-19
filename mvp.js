@@ -1,3 +1,4 @@
+
 function addNewPage() {
   var section1 = document.getElementById("home");
   var section2 = document.getElementById("addRecipe");
@@ -12,10 +13,8 @@ function home() {
   section2.style.display = "none";
 }
 
-//make the current position dynamic, when user adds new recipe, the new recipe will be added to total index
-
-var lastPosition = -600; //add to this when new recipe is added
-var currentPosition = 0; //index of first recipe
+var lastPosition = -600; 
+var currentPosition = 0; 
 function left() {
   if (currentPosition < 0) {
     currentPosition = currentPosition + 600;
@@ -31,7 +30,7 @@ function right() {
       "translateX(" + currentPosition + "px)";
   }
 }
-//-------------------------------------------------------------
+
 var list = [];
 
 function addRecipe() {
@@ -42,18 +41,12 @@ function addRecipe() {
   });
 
   renderRecipeCard()
-  
-  lastPosition = lastPosition - 600;
-  
+  lastPosition = lastPosition - 600; 
 }
 
 var renderRecipeCard = function () {
-  // var clearList = document.getElementById('cardSlider');
-  // clearList.textContent = '';
     for( var i = 0; i < list.length; i++) {
-    // create a var for restCard
     var recipeCard = document.createElement("div");
-    //update innerHTML with the child elements
     recipeCard.innerHTML = `
             <div class="container">
                 <div class="card">
