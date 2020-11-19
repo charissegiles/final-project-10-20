@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mvp.css" />
+    <script src="mvp.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="home">
+      <div class="nav">
+        <button class="navButton" id="addNew" onclick="addNewPage()">
+          Add Recipe
+        </button>
+      </div>
+      <div class="title">
+        <h1>Filipino Food Recipes</h1>
+      </div>
+      <div id="window1">
+        <div id="imageSlider">
+          <img src="images/lumpia.jpg" alt="lumpia" />
+          <img src="images/chickenAdobo.jpg" alt="chickenAdobo" />
+          <img src="images/pancit.jpg" alt="pancit" />
+          <img src="images/sinigang.jpg" alt="sinigang" />
+          <img src="images/karekare.jpg" alt="karekare" />
+          <img src="images/porkadobo.jpg" alt="porkadobo" />
+          <img src="images/porksisig.jpg" alt="sisig" />
+        </div>
+      </div>
+
+      <div id="window2">
+        <div id="leftArrow">
+          <button class="arrows" onclick="left()"><</button>
+        </div>
+        <div id="recipeContainer">
+          <div id="cardContainer">
+            <div id="cardSlider">
+              <div class="container">
+                <div class="card">
+                  <h2>Lumpia</h2>
+                </div>
+                <div class="card">
+                  <h4>Ingredients:</h4>
+                </div>
+                <div class="card">
+                  <ul>
+                    <li>50 pieces lumpia wrapper</li>
+                    <li>3 cups cooking oil</li>
+                    <li>1 1/2 lbs ground pork</li>
+                    <li>1 medium sized onion - minced</li>
+                    <li>2 large carrots - minced</li>
+                    <li>1 1/2 tsp garlic powder</li>
+                    <li>1/2 tsp ground black pepper</li>
+                    <li>1/2 cup parsley</li>
+                    <li>1 1/2 tsp salt</li>
+                    <li>1 TBS sesame oil</li>
+                    <li>2 eggs - beaten</li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <h4>Instructions:</h4>
+                </div>
+                <div class="card">
+                  <ol>
+                    <li>
+                      Combine ground pork, onion, carrots, garlic powder, ground
+                      black pepper, parsley, salt, and sesame oil in a bowl. Mix
+                      well.
+                    </li>
+                    <li>
+                      Scoop 1 to 1 1/2 TBS of filling and place over a piece of
+                      lumpia wrapper.
+                    </li>
+                    <li>
+                      Spread thge filling then fold both sides of the wrapper.
+                      Fold the bottom
+                    </li>
+                    <li>
+                      Brush beaten egg mixture on the top end of the wrapper.
+                    </li>
+                    <li>Roll-up until completely wrapped.</li>
+                    <li>
+                      Perform steps 2-5 until all the filling mixture are
+                      consumed.
+                    </li>
+                    <li>Heat oil in a cooking pot.</li>
+                    <li>Deep fry lumpia in medium heat until it floats.</li>
+                    <li>Remove from the pot.</li>
+                    <li>Let excess oil drip.</li>
+                    <li>Serve. Share and enjoy.</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="container">
+                <div class="card">
+                  <h2>Lumpia 2</h2>
+                </div>
+                <div>
+                  <h4>Ingredients:</h4>
+                </div>
+                <div>
+                  50 pieces lumpia wrapper 3 cups cooking oil 1 1/2 lbs ground
+                  pork 1 medium sized onion - minced 2 large carrots - minced 1
+                  1/2 tsp garlic powder 1/2 tsp ground black pepper 1/2 cup
+                  parsley 1 1/2 tsp salt 1 TBS sesame oil 2 eggs - beaten
+                </div>
+                <div>
+                  <h4>Instructions:</h4>
+                </div>
+                <div>
+                  Combine ground pork, onion, carrots, garlic powder, ground
+                  black pepper, parsley, salt, and sesame oil in a bowl. Mix
+                  well. Scoop 1 to 1 1/2 TBS of filling and place over a piece
+                  of lumpia wrapper. Spread thge filling then fold both sides of
+                  the wrapper. Fold the bottom Brush beaten egg mixture on the
+                  top end of the wrapper. Roll-up until completely wrapped.
+                  Perform steps 2-5 until all the filling mixture are consumed.
+                  Heat oil in a cooking pot. Deep fry lumpia in medium heat
+                  until it floats. Remove from the pot. Let excess oil drip.
+                  Serve. Share and enjoy.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="rightArrow">
+          <button class="arrows" onclick="right()">></button>
+        </div>
+      </div>
+      <div class="empty"></div>
+    </section>
+    <section id="addRecipe">
+      <div class="nav">
+        <button class="navButton" id="home" onclick="home()">Home</button>
+      </div>
+      <div class="title" id="title2">
+        <h1>Add Recipe</h1>
+      </div>
+      <div id="window3">
+        <div id="table">
+          <table>
+            <thead>
+              <th></th>
+              <th></th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell1">Recipe Name:</td>
+                <td class="cell1">
+                  <textarea
+                    name="recipeName"
+                    id="recipeName"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell">Ingredients:</td>
+                <td class="cell">
+                  <textarea
+                    name="ingredients"
+                    id="ingredients"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell">Instructions:</td>
+                <td class="cell">
+                  <textarea
+                    name="instructions"
+                    id="instructions"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="submit">
+          <button onclick="addRecipe()" id="submitButton">Submit</button>
+        </div>
+        <span id="test"></span>
+      </div>
+    </section>
+  </body>
+</html>
