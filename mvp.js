@@ -1,4 +1,3 @@
-
 function addNewPage() {
   var section1 = document.getElementById("home");
   var section2 = document.getElementById("addRecipe");
@@ -13,8 +12,8 @@ function home() {
   section2.style.display = "none";
 }
 
-var lastPosition = -600; 
-var currentPosition = 0; 
+var lastPosition = -600;
+var currentPosition = 0;
 function left() {
   if (currentPosition < 0) {
     currentPosition = currentPosition + 600;
@@ -40,16 +39,13 @@ function addRecipe() {
     instructions: document.getElementById("instructions").value,
   });
 
-  renderRecipeCard()
-  lastPosition = lastPosition - 600; 
-
-  document.getElementById("recipeName").value = ""
-  document.getElementById("ingredients").value = ""
-  document.getElementById("instructions").value = ""
+  renderRecipeCard();
+  lastPosition = lastPosition - 600;
+  clearForm();
 }
 
-var renderRecipeCard = function () {
-    for( var i = 0; i < list.length; i++) {
+function renderRecipeCard() {
+  for (var i = 0; i < list.length; i++) {
     var recipeCard = document.createElement("div");
     recipeCard.innerHTML = `
             <div class="container">
@@ -70,6 +66,11 @@ var renderRecipeCard = function () {
                 </div> 
             </div>
         `;
-    }
+  }
   document.getElementById("cardSlider").appendChild(recipeCard);
-};
+}
+function clearForm() {
+  document.getElementById("recipeName").value = "";
+  document.getElementById("ingredients").value = "";
+  document.getElementById("instructions").value = "";
+}
