@@ -14,7 +14,7 @@ function home() {
 
 //make the current position dynamic, when user adds new recipe, the new recipe will be added to total index
 
-var lastPosition = -3600; //add to this when new recipe is added
+var lastPosition = -600; //add to this when new recipe is added
 var currentPosition = 0; //index of first recipe
 function left() {
   if (currentPosition < 0) {
@@ -41,35 +41,16 @@ function addRecipe() {
     instructions: document.getElementById("instructions").value,
   });
 
-//   var newReceipe = document.createElement("div");
-//   newReceipe.classList.add("container");
-//   newReceipe.innerHTML = ` <div class="card">
-//         <h2>document.getElementById("recipeName").value</h2>
-//         </div>
-//         <div class="card">
-//         <h4>Ingredients:</h4>
-//         </div>
-//         <div class="card">
-//         document.getElementById("ingredients").value
-//         </div>
-//         <div class="card">
-//         <h4>Instructions:</h4>
-//         </div>
-//         <div class="card">
-//         document.getElementById("instructions").value
-//         </div> `;
-
-//   document.getElementById("cardSlider").appendChild(recipeCard);
   renderRecipeCard()
-  //document.getElementById("cardSlider").appendChild(recipeCard);
-  //lastPosition = lastPosition - 600;
+  
+  lastPosition = lastPosition - 600;
   
 }
 
 var renderRecipeCard = function () {
   // var clearList = document.getElementById('cardSlider');
   // clearList.textContent = '';
-  
+    for( var i = 0; i < list.length; i++) {
     // create a var for restCard
     var recipeCard = document.createElement("div");
     //update innerHTML with the child elements
@@ -92,11 +73,6 @@ var renderRecipeCard = function () {
                 </div> 
             </div>
         `;
-    
-  
-};
-var readList = function() {
-    for(var i=0; i<list.length; i++){
-        console.log(i)
     }
-}
+  document.getElementById("cardSlider").appendChild(recipeCard);
+};
